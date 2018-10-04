@@ -69,6 +69,7 @@ class Widgets_Manager {
 			'html',
 			'menu-anchor',
 			'sidebar',
+            'sitemap',
 		];
 
 		$this->_widget_types = [];
