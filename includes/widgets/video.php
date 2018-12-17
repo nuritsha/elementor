@@ -122,7 +122,7 @@ class Widget_Video extends Widget_Base {
 		$this->add_control(
 			'youtube_url',
 			[
-				'label' => __( 'URL', 'elementor' ),
+				'label' => __( 'Link', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
@@ -143,7 +143,7 @@ class Widget_Video extends Widget_Base {
 		$this->add_control(
 			'vimeo_url',
 			[
-				'label' => __( 'URL', 'elementor' ),
+				'label' => __( 'Link', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
@@ -164,7 +164,7 @@ class Widget_Video extends Widget_Base {
 		$this->add_control(
 			'dailymotion_url',
 			[
-				'label' => __( 'URL', 'elementor' ),
+				'label' => __( 'Link', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
@@ -185,7 +185,7 @@ class Widget_Video extends Widget_Base {
 		$this->add_control(
 			'hosted_url',
 			[
-				'label' => __( 'URL', 'elementor' ),
+				'label' => __( 'Link', 'elementor' ),
 				'type' => Controls_Manager::MEDIA,
 				'dynamic' => [
 					'active' => true,
@@ -713,7 +713,6 @@ class Widget_Video extends Widget_Base {
 			[
 				'label' => __( 'Entrance Animation', 'elementor' ),
 				'type' => Controls_Manager::ANIMATION,
-				'default' => '',
 				'frontend_available' => true,
 				'label_block' => true,
 			]
