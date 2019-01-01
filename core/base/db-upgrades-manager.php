@@ -46,7 +46,7 @@ abstract class DB_Upgrades_Manager extends Background_Task_Manager {
 	public function on_runner_complete( $did_tasks = false ) {
 		$logger = Plugin::$instance->logger->get_logger();
 
-		$logger->info( 'Update database completed', [
+		$logger->info( 'Database update completed', [
 			'meta' => [
 				'plugin' => $this->get_plugin_label(),
 				'from' => $this->current_version,
@@ -65,7 +65,7 @@ abstract class DB_Upgrades_Manager extends Background_Task_Manager {
 
 	public function admin_notice_start_upgrade() {
 		$upgrade_link = $this->get_start_action_url();
-		$message = '<p>' . sprintf( __( '%s needs upgrade the Database.', 'elementor' ), $this->get_plugin_label() ) . '</p>';
+		$message = '<p>' . sprintf( __( '%s requires Database update.', 'elementor' ), $this->get_plugin_label() ) . '</p>';
 		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, __( 'Update Now', 'elementor' ) ) . '</p>';
 
 		echo '<div class="notice notice-error">' . $message . '</div>';
@@ -73,7 +73,7 @@ abstract class DB_Upgrades_Manager extends Background_Task_Manager {
 
 	public function admin_notice_upgrade_is_running() {
 		$upgrade_link = $this->get_continue_action_url();
-		$message = '<p>' . sprintf( __( '%s is updating the database in background..', 'elementor' ), $this->get_plugin_label() ) . '</p>';
+		$message = '<p>' . sprintf( __( '%s is updating the Database in the background...', 'elementor' ), $this->get_plugin_label() ) . '</p>';
 		$message .= '<p>' . sprintf( '<a href="%s" class="button-primary">%s</a>', $upgrade_link, __( 'Run Immediately', 'elementor' ) ) . '</p>';
 
 		echo '<div class="notice notice-warning">' . $message . '</div>';
@@ -82,7 +82,7 @@ abstract class DB_Upgrades_Manager extends Background_Task_Manager {
 	public function admin_notice_upgrade_is_completed() {
 		$this->delete_flag( 'completed' );
 
-		$message = '<p>' . sprintf( __( '%s has been update the database. Enjoy!', 'elementor' ), $this->get_plugin_label() ) . '</p>';
+		$message = '<p>' . sprintf( __( '%s updated the Database. Enjoy!', 'elementor' ), $this->get_plugin_label() ) . '</p>';
 
 		echo '<div class="notice notice-success">' . $message . '</div>';
 	}
@@ -112,7 +112,7 @@ abstract class DB_Upgrades_Manager extends Background_Task_Manager {
 
 		$updater->save()->dispatch();
 
-		Plugin::$instance->logger->get_logger()->info( 'Update database has been queued', [
+		Plugin::$instance->logger->get_logger()->info( 'Database update queued', [
 			'meta' => [
 				'plugin' => $this->get_plugin_label(),
 				'from' => $this->current_version,
