@@ -37,6 +37,7 @@ ImageCarouselHandler = HandlerModule.extend( {
 			arrows: -1 !== [ 'arrows', 'both' ].indexOf( elementSettings.navigation ),
 			dots: -1 !== [ 'dots', 'both' ].indexOf( elementSettings.navigation ),
 			rtl: 'rtl' === elementSettings.direction,
+			slideCss: 'slide-position-' + elementSettings.image_position,
 			responsive: [
 				{
 					breakpoint: breakpoints.lg,

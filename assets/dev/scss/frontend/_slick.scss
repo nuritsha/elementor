@@ -38,7 +38,7 @@
 	position: relative;
 	left: 0;
 	top: 0;
-	display: block;
+	display: flex;
 
 	&:before,
 	&:after {
@@ -89,6 +89,18 @@
 		display: block;
 		height: auto;
 		border: 1px solid transparent;
+	}
+
+	&.slide-position {
+		&-top {
+			align-self: flex-start;
+		}
+		&-middle {
+			align-self: center;
+		}
+		&-bottom {
+			align-self: flex-end;
+		}
 	}
 }
 

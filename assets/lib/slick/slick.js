@@ -509,7 +509,7 @@
 		_.$slides =
 			_.$slider
 				.children( _.options.slide + ':not(.slick-cloned)')
-				.addClass('slick-slide');
+				.addClass('slick-slide ' + _.options.slideCss);
 
 		_.slideCount = _.$slides.length;
 
@@ -1903,7 +1903,7 @@
 		_.$slides =
 			_.$slideTrack
 				.children(_.options.slide)
-				.addClass('slick-slide');
+				.addClass('slick-slide ' + _.options.slideCss);
 
 		_.slideCount = _.$slides.length;
 

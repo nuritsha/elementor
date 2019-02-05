@@ -561,6 +561,22 @@ class Widget_Image_Carousel extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'image_position',
+			[
+				'label' => __( 'Image Position', 'elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'top',
+				'options' => [
+					'default' => __( 'Default', 'elementor' ),
+					'top' => __( 'Top', 'elementor' ),
+					'middle' => __( 'Middle', 'elementor' ),
+					'bottom' => __( 'Bottom', 'elementor' ),
+				],
+				'frontend_available' => true,
+			]
+		);
+
 		$this->end_controls_section();
 
 		$this->start_controls_section(
