@@ -167,6 +167,22 @@ class Widget_Image_Carousel extends Widget_Base {
 		);
 
 		$this->add_control(
+			'image_position',
+			[
+				'label' => __( 'Image Position', 'elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'top',
+				'options' => [
+					'default' => __( 'Default', 'elementor' ),
+					'top' => __( 'Top', 'elementor' ),
+					'middle' => __( 'Middle', 'elementor' ),
+					'bottom' => __( 'Bottom', 'elementor' ),
+				],
+				'frontend_available' => true,
+			]
+		);
+
+		$this->add_control(
 			'navigation',
 			[
 				'label' => __( 'Navigation', 'elementor' ),
@@ -558,22 +574,6 @@ class Widget_Image_Carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-image-carousel-wrapper .elementor-image-carousel .slick-slide-image' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
-			]
-		);
-
-		$this->add_control(
-			'image_position',
-			[
-				'label' => __( 'Image Position', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'top',
-				'options' => [
-					'default' => __( 'Default', 'elementor' ),
-					'top' => __( 'Top', 'elementor' ),
-					'middle' => __( 'Middle', 'elementor' ),
-					'bottom' => __( 'Bottom', 'elementor' ),
-				],
-				'frontend_available' => true,
 			]
 		);
 
