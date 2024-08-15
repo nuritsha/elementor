@@ -7,6 +7,7 @@ const EditorSelectors = {
 	plusIcon: '.eicon-plus-circle',
 	siteTitle: '.site-title >> nth=0',
 	pageTitle: '.entry-title >> nth=0',
+	pageHeader: '.page-header',
 	panels: {
 		topBar: {
 			wrapper: '#elementor-editor-wrapper-v2',
@@ -91,12 +92,14 @@ const EditorSelectors = {
 			return `${ this.widget } img`;
 		},
 	},
+	galleryControl: {
+		addGalleryBtn: 'button.elementor-control-gallery-add',
+	},
 	imageCarousel: {
 		widget: '[data-widget_type="image-carousel.default"]',
 		get link() {
 			return `${ this.widget } a`;
 		},
-		addGalleryBtn: 'button.elementor-control-gallery-add',
 		navigationSelect: '.elementor-control-navigation select',
 		autoplaySelect: 'input[data-setting="autoplay"]',
 		autoplaySpeedLabel: 'Autoplay Speed',
@@ -199,6 +202,9 @@ const EditorSelectors = {
 		menu: '.elementor-context-menu',
 		saveAsGlobal: '.elementor-context-menu-list__item.elementor-context-menu-list__item-save.elementor-context-menu-list__item--disabled',
 		notes: '.elementor-context-menu-list__item.elementor-context-menu-list__item-open_notes.elementor-context-menu-list__item--disabled',
+	},
+	dialog: {
+		lightBox: '.elementor-lightbox',
 	},
 };
 
